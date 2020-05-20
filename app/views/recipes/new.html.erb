@@ -1,4 +1,11 @@
 <h1>Create A New Recipe</h1>
+<% if @recipe.errors %>
+    <ul>
+        <% @recipe.errors.full_messages.each do |message| %>
+            <li class="error"><%= message %></li>
+        <% end %>
+    </ul>
+<% end %>
 
 <%= form_for @recipe do |f| %>
     <%= f.label :name %>
