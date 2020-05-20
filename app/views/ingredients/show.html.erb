@@ -1,8 +1,13 @@
 <h1>Ingredients</h1>
-
-
+<br>
+<fieldset>
+<legend><h1> <%=@ingredient.name%> </h1></legend>
 <ul>
     <% @ingredient.recipes.each do |ig| %>
         <li><%= ig.name %></li>
         <% end %>
 </ul>
+</fieldset>
+
+<%=@ingredients.last.users.all%>
+

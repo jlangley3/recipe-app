@@ -5,6 +5,7 @@ class IngredientsController < ApplicationController
 
   def show
     @ingredient = Ingredient.find(params[:id])
+    @join = RecipeIngredient.find_by(ingredient_id: @ingredient.id)
   end
 
   def new
