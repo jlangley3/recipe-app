@@ -1,2 +1,17 @@
-<h1>Recipes#show</h1>
-<p>Find me in app/views/recipes/show.html.erb</p>
+<h1>Recipe Page</h1>
+
+<h2> <%= @recipe.name %> </h2> <br>
+
+<ul>
+    <% @recipe.ingredients.each do |ig| %>
+        <li><%= ig.name %></li>
+        <% end %>
+</ul>
+
+
+<li> Author: <%= @recipe.user.name %> </li>
+      
+
+
+
+

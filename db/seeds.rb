@@ -8,6 +8,7 @@
 User.destroy_all
 Recipe.destroy_all
 Ingredient.destroy_all
+
 jim = User.create(name: "Jim", allergy: "peanuts")
 sam = User.create(name: "Sam", allergy: "strawberries")
 
@@ -16,3 +17,12 @@ bunt_cake = Recipe.create(name: "Bunt Cake", user: jim)
 fruit_cake = Recipe.create(name: "Fruit Cake", user: sam)
 
 strawberries = Ingredient.create(name: "Strawberries", recipe: fruit_cake)
+blueberries = Ingredient.create(name: "Blueberries", recipe: fruit_cake)
+raspberries = Ingredient.create(name: "Raspberries", recipe: fruit_cake)
+
+yogurt = Ingredient.create(name: "Yogurt", recipe: bunt_cake)
+
+pepper = Ingredient.create(name: "Pepper", recipe: nut_cake)
+salt = Ingredient.create(name: "Salt", recipe: nut_cake)
+
+

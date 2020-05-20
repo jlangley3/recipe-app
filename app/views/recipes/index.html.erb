@@ -1,2 +1,14 @@
-<h1>Recipes#index</h1>
-<p>Find me in app/views/recipes/index.html.erb</p>
+<h1>Recipes</h1>
+
+<ul>
+    <% @recipes.each do |recipe| %>
+        <li> <%= link_to recipe.name, recipe_path(recipe) %> </li>
+        <% end %>
+</ul> 
+
+
+<form accept-charset="UTF-8" action="/patch" data-remote="true" method="get">   
+<label for="q">Search for:</label>   <input id="q" name="q" type="text" />   
+<input name="commit" type="submit" value="Search" data-disable-with="Search" /> 
+</form>
+
