@@ -1,0 +1,16 @@
+<h1>Users#show</h1>
+<p>Find me in app/views/users/show.html.erb</p>
+
+
+<h4><%=@user.name%></h4>
+
+ <ul>
+    <%@user.recipes.each do |recipe| %>
+      <li><%= recipe.name %></li>
+    <% end %>
+  </ul>
+
+
+  <%= form_tag user_path(@user), method: "delete" do%>
+  <%=submit_tag "Delete this bamma"%>
+<%end%>
